@@ -4,6 +4,10 @@
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
+Assets/StreamingAssets*
+Converter/*
+webFM_Display/StreamingAssets*
+Assets/Prefabs/PY*
 
 # Visual Studio 2015 cache directory
 /.vs/

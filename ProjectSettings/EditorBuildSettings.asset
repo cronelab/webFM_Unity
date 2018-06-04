@@ -6,5 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/ReconGL.unity
+    path: Assets/Scenes/Web/ReconGL.unity
     guid: 7e36065508f87e843920a45500b5cb04
+  m_configObjects: {}
