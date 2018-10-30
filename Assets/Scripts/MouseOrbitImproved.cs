@@ -6,21 +6,23 @@ public class MouseOrbitImproved : MonoBehaviour
 {
 
     public Transform target;
-    public float distance = 5.0f;
-    public float xSpeed = 120.0f;
-    public float ySpeed = 120.0f;
+    private float distance = 25.0f;
+    private float xSpeed = 1200.0f;
+    private float ySpeed = 1200.0f;
     Rect screenRect = new Rect(0, 0, Screen.width, Screen.height);
 
-    public float yMinLimit = -20f;
-    public float yMaxLimit = 80f;
+    private float yMinLimit = -100f;
+    private float yMaxLimit = 100f;
 
-    public float distanceMin = .5f;
-    public float distanceMax = 15f;
+    private float distanceMin = .5f;
+    private float distanceMax = 105f;
 
     float x = 0.0f;
     float y = 0.0f;
 
     bool gamescreen = true;
+    private Vector3 dragOrigin;
+    private float dragSpeed = .01f;
 
     void Start()
     {
@@ -32,23 +34,37 @@ public class MouseOrbitImproved : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetMouseButtonDown(2))
+        {
+            dragOrigin = Input.mousePosition;
+            return;
+        }
+        if (!Input.GetMouseButton(2) && (!Input.GetMouseButton(1) && Input.GetAxis("Mouse ScrollWheel") == 0)) return;
+
+        Vector3 pos = Camera.main.ScreenToViewportPoint(Input.mousePosition - dragOrigin);
+        Vector3 move = new Vector3(pos.x * dragSpeed, pos.y * dragSpeed,0);
+
+        transform.Translate(move, Space.World);
 
         if (Input.GetMouseButton(1) || Input.GetAxis("Mouse ScrollWheel") != 0)
         {
-            x += Input.GetAxis("Mouse X") * xSpeed * distance * 0.02f;
+            x += Input.GetAxis("Mouse X") * xSpeed  * 0.02f;
             y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
 
             y = ClampAngle(y, yMinLimit, yMaxLimit);
 
             Quaternion rotation = Quaternion.Euler(y, x, 0);
 
-            distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel") * 5, distanceMin, distanceMax);
+            distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel") * 5, -10, distanceMax);
 
             Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
             Vector3 position = rotation * negDistance + target.position;
 
             transform.rotation = rotation;
             transform.position = position;
+            Camera cam =gameObject.GetComponent<Camera>();
+            //            cam.nearClipPlane = -10;
+            cam.orthographicSize = distance;
         }
     }
 

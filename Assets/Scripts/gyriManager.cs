@@ -18,7 +18,6 @@ public class gyriManager : MonoBehaviour {
         {
             rend.material = new Material(shader);
             rend.material.color = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f));
-            print(rend.material.color);
         }
     }
 

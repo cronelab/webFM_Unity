@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class changeElecColors : MonoBehaviour {
 
     [SerializeField]
-    private Gradient elecGradient;
+    public Gradient elecGradient;
     private Vector3 elecSize;
     public static bool viz = true;
+
 
     private void Start()
     {

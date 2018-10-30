@@ -41,25 +41,11 @@ sysinfo.txt
 #Brain data
 [Bb]rains/
 Assets/Prefabs/BrainMeshes.meta
-Assets/Prefabs/BrainMeshes/PY17N009.prefab
-Assets/Prefabs/BrainMeshes/PY17N009.prefab.meta
-Assets/Prefabs/BrainMeshes/PY18N002.prefab
-Assets/Prefabs/BrainMeshes/PY18N002.prefab.meta
-Assets/Prefabs/BrainMeshes/PY18N003.prefab
-Assets/Prefabs/BrainMeshes/PY18N003.prefab.meta
-Assets/Prefabs/BrainMeshes/PY18N004.prefab
-Assets/Prefabs/BrainMeshes/PY18N004.prefab.meta
-Assets/Prefabs/BrainMeshes/PY18N006_noGyri.prefab
-Assets/Prefabs/BrainMeshes/PY18N006_noGyri.prefab.meta
-Assets/Prefabs/BrainMeshes/PY18N00X_MP.prefab
-Assets/Prefabs/BrainMeshes/PY18N00X_MP.prefab.meta
-Assets/Resources/PY17N009.prefab
-Assets/Resources/PY17N009.prefab.meta
-Assets/Resources/PY18N002.prefab
-Assets/Resources/PY18N002.prefab.meta
-Assets/Resources/PY18N003.prefab
-Assets/Resources/PY18N003.prefab.meta
+Assets/Prefabs/BrainMeshes/*
+Assets/Resources/*
+StreamingAssets/*
 Image 17_10-41-51
 Image 2018 - 05 - 17_10 - 28 - 53
 Image 2018 - 05 - 17_11 - 25 - 20.png
 Image_40
+Assets/PlayServicesResolver/*

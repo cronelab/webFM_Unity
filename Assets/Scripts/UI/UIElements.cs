@@ -49,7 +49,7 @@ public class UIElements : MonoBehaviour {
         structBut.SetActive(false);
         transBut.SetActive(false);
         brainMesh = GameObject.Find("Brain Manager").transform.GetChild(0).gameObject;
-        Debug.Log(brainMesh.name);
+
         brainMesh.SetActive(true);
 
     }
@@ -166,6 +166,38 @@ public class UIElements : MonoBehaviour {
         brainstem.SetActive(state);
 
     }
+
+    public void toggleWM()
+    {
+       if(lPia.activeSelf)
+        {
+            toggleAll(false);
+            var electrodes = GameObject.FindGameObjectsWithTag("Electrodes");
+            foreach (GameObject elec in electrodes)
+            {
+                elec.GetComponent<isTouchingCollider>().enabled = true;
+            }
+            GameObject.Find("White_matter").transform.GetChild(0).GetComponent<MeshCollider>().enabled = true;
+            GameObject.Find("White_matter").transform.GetChild(1).GetComponent<MeshCollider>().enabled = true;
+            GameObject.Find("White_matter").transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true;
+            GameObject.Find("White_matter").transform.GetChild(1).GetComponent<MeshRenderer>().enabled = true;
+        }
+        else
+        {
+            toggleAll(true);
+            var electrodes = GameObject.FindGameObjectsWithTag("Electrodes");
+            foreach (GameObject elec in electrodes)
+            {
+                elec.GetComponent<isTouchingCollider>().enabled = false;
+                elec.GetComponent<Renderer>().material.color = Color.black;
+            }
+            GameObject.Find("White_matter").transform.GetChild(0).GetComponent<MeshCollider>().enabled = false;
+            GameObject.Find("White_matter").transform.GetChild(1).GetComponent<MeshCollider>().enabled = false;
+            GameObject.Find("White_matter").transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
+            GameObject.Find("White_matter").transform.GetChild(1).GetComponent<MeshRenderer>().enabled = false;
+        }
+    }
+
     public void togglePia()
     {
         if (!lPia.activeSelf)
