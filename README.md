@@ -1,5 +1,8 @@
 # Code for WebFM's Unity / WebGL display
 
+
+![alt text](/WebFM.PNG)
+
 - Generate a brain mesh
   - Using Freesurfer/[img_pipe](https://github.com/ChangLabUcsf/img_pipe) generate an .obj/.mtl file
     - patient=img_pipe.freeCoG(subj='subj', hem='hem')

@@ -1,136 +1,24 @@
  (0,0): Unity incremental compiler server
- (0,0): watchdog active on pid: 22056
- (0,0): [10/30/2018 02:48:55.231 PM] Assembly-CSharp.dll: no prior compilation found in cache
- (0,0): [10/30/2018 02:48:55.244 PM] Assembly-CSharp.dll compiling...
- (0,0): [10/30/2018 02:48:56.719 PM] Assembly-CSharp.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Assembly-CSharp.dll
- (0,0): [10/30/2018 02:48:56.786 PM] Assembly-CSharp.dll compilation finished in 1542ms  source files re-parsed: 19 metadata reloaded: 189
- (0,0): [10/30/2018 02:51:00.199 PM] Compiler cache size is now 12.33 MB
- (0,0): [10/30/2018 02:52:28.719 PM] Assembly-CSharp.dll compiling...
- (0,0): [10/30/2018 02:52:28.781 PM] Assembly-CSharp.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Assembly-CSharp.dll
- (0,0): [10/30/2018 02:52:28.831 PM] Assembly-CSharp.dll compilation finished in 111ms  source files re-parsed: 1 metadata reloaded: 0
- (0,0): [10/30/2018 02:52:28.843 PM] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
- (0,0): [10/30/2018 02:53:51.836 PM] Assembly-CSharp.dll compiling...
- (0,0): [10/30/2018 02:53:51.886 PM] Assembly-CSharp.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Assembly-CSharp.dll
- (0,0): [10/30/2018 02:53:51.934 PM] Assembly-CSharp.dll compilation finished in 98ms  source files re-parsed: 1 metadata reloaded: 0
- (0,0): [10/30/2018 02:53:51.946 PM] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
- (0,0): [10/30/2018 02:55:12.834 PM] Assembly-CSharp.dll compiling...
- (0,0): [10/30/2018 02:55:12.887 PM] Assembly-CSharp.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Assembly-CSharp.dll
- (0,0): [10/30/2018 02:55:12.934 PM] Assembly-CSharp.dll compilation finished in 100ms  source files re-parsed: 1 metadata reloaded: 0
- (0,0): [10/30/2018 02:55:12.945 PM] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
- (0,0): [10/30/2018 02:56:03.060 PM] Assembly-CSharp.dll compiling...
- (0,0): [10/30/2018 02:56:03.113 PM] Assembly-CSharp.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Assembly-CSharp.dll
- (0,0): [10/30/2018 02:56:03.161 PM] Assembly-CSharp.dll compilation finished in 99ms  source files re-parsed: 1 metadata reloaded: 0
- (0,0): [10/30/2018 02:56:03.172 PM] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
- (0,0): [10/30/2018 02:57:33.797 PM] Assembly-CSharp.dll compiling...
- (0,0): [10/30/2018 02:57:33.844 PM] Assembly-CSharp.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Assembly-CSharp.dll
- (0,0): [10/30/2018 02:57:33.898 PM] Assembly-CSharp.dll compilation finished in 100ms  source files re-parsed: 1 metadata reloaded: 0
- (0,0): [10/30/2018 02:57:33.910 PM] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
- (0,0): [10/30/2018 02:58:14.745 PM] Assembly-CSharp.dll compiling...
- (0,0): [10/30/2018 02:58:14.796 PM] Assembly-CSharp.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Assembly-CSharp.dll
- (0,0): [10/30/2018 02:58:14.843 PM] Assembly-CSharp.dll compilation finished in 98ms  source files re-parsed: 1 metadata reloaded: 0
- (0,0): [10/30/2018 02:58:14.855 PM] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
- (0,0): [10/30/2018 02:58:45.923 PM] Assembly-CSharp.dll compiling...
- (0,0): [10/30/2018 02:58:45.976 PM] Assembly-CSharp.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Assembly-CSharp.dll
- (0,0): [10/30/2018 02:58:46.022 PM] Assembly-CSharp.dll compilation finished in 99ms  source files re-parsed: 1 metadata reloaded: 0
- (0,0): [10/30/2018 02:58:46.034 PM] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
- (0,0): [10/30/2018 03:00:00.936 PM] Assembly-CSharp.dll compiling...
- (0,0): [10/30/2018 03:00:01.001 PM] Assembly-CSharp.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Assembly-CSharp.dll
- (0,0): [10/30/2018 03:00:01.049 PM] Assembly-CSharp.dll compilation finished in 112ms  source files re-parsed: 1 metadata reloaded: 0
- (0,0): [10/30/2018 03:00:01.060 PM] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
- (0,0): [10/30/2018 03:00:23.093 PM] Assembly-CSharp.dll compiling...
- (0,0): [10/30/2018 03:00:23.140 PM] Assembly-CSharp.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Assembly-CSharp.dll
- (0,0): [10/30/2018 03:00:23.187 PM] Assembly-CSharp.dll compilation finished in 93ms  source files re-parsed: 1 metadata reloaded: 0
- (0,0): [10/30/2018 03:00:23.198 PM] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
- (0,0): [10/30/2018 03:00:45.110 PM] Assembly-CSharp.dll compiling...
- (0,0): [10/30/2018 03:00:45.160 PM] Assembly-CSharp.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Assembly-CSharp.dll
- (0,0): [10/30/2018 03:00:45.208 PM] Assembly-CSharp.dll compilation finished in 98ms  source files re-parsed: 1 metadata reloaded: 0
- (0,0): [10/30/2018 03:00:45.219 PM] Assembly-CSharp.dll: compilation was cached, 1 file(s) were found to have changed.
- (0,0): [10/30/2018 03:24:24.804 PM] Unity.TextMeshPro.dll: no prior compilation found in cache
- (0,0): [10/30/2018 03:24:24.816 PM] Unity.TextMeshPro.dll compiling...
- (0,0): [10/30/2018 03:24:25.715 PM] Unity.TextMeshPro.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Unity.TextMeshPro.dll
- (0,0): [10/30/2018 03:24:25.782 PM] Unity.TextMeshPro.dll compilation finished in 966ms  source files re-parsed: 45 metadata reloaded: 64
- (0,0): [10/30/2018 03:24:26.016 PM] Assembly-CSharp.dll: no prior compilation found in cache
- (0,0): [10/30/2018 03:24:26.028 PM] Assembly-CSharp.dll compiling...
- (0,0): [10/30/2018 03:24:26.092 PM] Assembly-CSharp.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Assembly-CSharp.dll
- (0,0): [10/30/2018 03:24:26.139 PM] Assembly-CSharp.dll compilation finished in 110ms  source files re-parsed: 19 metadata reloaded: 1
- (0,0): [10/30/2018 03:26:15.803 PM] Compiler cache size is now 15.73 MB
- (0,0): [10/30/2018 03:28:13.485 PM] Unity.TextMeshPro.dll: no prior compilation found in cache
- (0,0): [10/30/2018 03:28:13.496 PM] Unity.TextMeshPro.dll compiling...
- (0,0): [10/30/2018 03:28:13.693 PM] Unity.PackageManagerUI.Editor.dll: no prior compilation found in cache
- (0,0): [10/30/2018 03:28:13.704 PM] Unity.PackageManagerUI.Editor.dll compiling...
- (0,0): [10/30/2018 03:28:13.761 PM] UnityEditor.StandardEvents.dll: no prior compilation found in cache
- (0,0): [10/30/2018 03:28:13.773 PM] UnityEditor.StandardEvents.dll compiling...
- (0,0): [10/30/2018 03:28:13.867 PM] UnityEditor.StandardEvents.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\UnityEditor.StandardEvents.dll
- (0,0): [10/30/2018 03:28:13.913 PM] UnityEditor.StandardEvents.dll compilation finished in 140ms  source files re-parsed: 1 metadata reloaded: 0
- (0,0): [10/30/2018 03:28:13.955 PM] Unity.TextMeshPro.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Unity.TextMeshPro.dll
- (0,0): [10/30/2018 03:28:13.973 PM] Unity.PackageManagerUI.Editor.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Unity.PackageManagerUI.Editor.dll
- (0,0): [10/30/2018 03:28:14.025 PM] Unity.PackageManagerUI.Editor.dll compilation finished in 321ms  source files re-parsed: 44 metadata reloaded: 2
- (0,0): [10/30/2018 03:28:14.033 PM] Unity.TextMeshPro.dll compilation finished in 537ms  source files re-parsed: 45 metadata reloaded: 19
- (0,0): [10/30/2018 03:28:14.273 PM] Unity.TextMeshPro.Editor.dll: no prior compilation found in cache
- (0,0): [10/30/2018 03:28:14.284 PM] Unity.TextMeshPro.Editor.dll compiling...
- (0,0): [10/30/2018 03:28:14.456 PM] Unity.TextMeshPro.Editor.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Unity.TextMeshPro.Editor.dll
- (0,0): [10/30/2018 03:28:14.608 PM] Unity.TextMeshPro.Editor.dll compilation finished in 324ms  source files re-parsed: 39 metadata reloaded: 1
- (0,0): [10/30/2018 03:28:14.817 PM] Assembly-CSharp.dll: no prior compilation found in cache
- (0,0): [10/30/2018 03:28:14.829 PM] Assembly-CSharp.dll compiling...
- (0,0): [10/30/2018 03:28:14.896 PM] Assembly-CSharp.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Assembly-CSharp.dll
- (0,0): [10/30/2018 03:28:14.948 PM] Assembly-CSharp.dll compilation finished in 119ms  source files re-parsed: 19 metadata reloaded: 3
- (0,0): [10/30/2018 03:31:20.654 PM] Compiler cache size is now 26.05 MB
- (0,0): [10/30/2018 03:47:09.159 PM] Unity.TextMeshPro.dll: no prior compilation found in cache
- (0,0): [10/30/2018 03:47:09.171 PM] Unity.TextMeshPro.dll compiling...
- (0,0): [10/30/2018 03:47:09.450 PM] Unity.TextMeshPro.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Unity.TextMeshPro.dll
- (0,0): [10/30/2018 03:47:09.523 PM] Unity.TextMeshPro.dll compilation finished in 352ms  source files re-parsed: 45 metadata reloaded: 0
- (0,0): [10/30/2018 03:47:09.857 PM] Assembly-CSharp.dll: no prior compilation found in cache
- (0,0): [10/30/2018 03:47:09.869 PM] Assembly-CSharp.dll compiling...
- (0,0): [10/30/2018 03:47:09.924 PM] Assembly-CSharp.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Assembly-CSharp.dll
- (0,0): [10/30/2018 03:47:09.972 PM] Assembly-CSharp.dll compilation finished in 103ms  source files re-parsed: 19 metadata reloaded: 1
- (0,0): [10/30/2018 03:49:58.628 PM] Unity.TextMeshPro.dll: no prior compilation found in cache
- (0,0): [10/30/2018 03:49:58.640 PM] Unity.TextMeshPro.dll compiling...
- (0,0): [10/30/2018 03:49:58.743 PM] Unity.PackageManagerUI.Editor.dll compiling...
- (0,0): [10/30/2018 03:49:58.826 PM] UnityEditor.StandardEvents.dll compiling...
- (0,0): [10/30/2018 03:49:58.865 PM] UnityEditor.StandardEvents.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\UnityEditor.StandardEvents.dll
- (0,0): [10/30/2018 03:49:58.865 PM] Unity.PackageManagerUI.Editor.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Unity.PackageManagerUI.Editor.dll
- (0,0): [10/30/2018 03:49:58.898 PM] UnityEditor.StandardEvents.dll compilation finished in 72ms  source files re-parsed: 0 metadata reloaded: 0
- (0,0): [10/30/2018 03:49:58.915 PM] UnityEditor.StandardEvents.dll: compilation was cached, 0 file(s) were found to have changed.
- (0,0): [10/30/2018 03:49:58.924 PM] Unity.PackageManagerUI.Editor.dll compilation finished in 180ms  source files re-parsed: 0 metadata reloaded: 0
- (0,0): [10/30/2018 03:49:58.936 PM] Unity.PackageManagerUI.Editor.dll: compilation was cached, 0 file(s) were found to have changed.
- (0,0): [10/30/2018 03:49:58.949 PM] Unity.TextMeshPro.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Unity.TextMeshPro.dll
- (0,0): [10/30/2018 03:49:59.022 PM] Unity.TextMeshPro.dll compilation finished in 382ms  source files re-parsed: 45 metadata reloaded: 0
- (0,0): [10/30/2018 03:49:59.335 PM] Unity.TextMeshPro.Editor.dll compiling...
- (0,0): [10/30/2018 03:49:59.444 PM] Unity.TextMeshPro.Editor.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Unity.TextMeshPro.Editor.dll
- (0,0): [10/30/2018 03:49:59.563 PM] Unity.TextMeshPro.Editor.dll compilation finished in 228ms  source files re-parsed: 0 metadata reloaded: 1
- (0,0): [10/30/2018 03:49:59.575 PM] Unity.TextMeshPro.Editor.dll: compilation was cached, 0 file(s) were found to have changed.
- (0,0): [10/30/2018 03:49:59.853 PM] Assembly-CSharp.dll: no prior compilation found in cache
- (0,0): [10/30/2018 03:49:59.865 PM] Assembly-CSharp.dll compiling...
- (0,0): [10/30/2018 03:49:59.946 PM] Assembly-CSharp.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Assembly-CSharp.dll
- (0,0): [10/30/2018 03:49:59.996 PM] Assembly-CSharp.dll compilation finished in 131ms  source files re-parsed: 19 metadata reloaded: 3
- (0,0): [10/30/2018 03:50:16.554 PM] Unity.TextMeshPro.dll: no prior compilation found in cache
- (0,0): [10/30/2018 03:50:16.565 PM] Unity.TextMeshPro.dll compiling...
- (0,0): [10/30/2018 03:50:16.868 PM] Unity.TextMeshPro.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Unity.TextMeshPro.dll
- (0,0): [10/30/2018 03:50:16.940 PM] Unity.TextMeshPro.dll compilation finished in 375ms  source files re-parsed: 45 metadata reloaded: 0
- (0,0): [10/30/2018 03:50:17.269 PM] Assembly-CSharp.dll: no prior compilation found in cache
- (0,0): [10/30/2018 03:50:17.281 PM] Assembly-CSharp.dll compiling...
- (0,0): [10/30/2018 03:50:17.336 PM] Assembly-CSharp.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Assembly-CSharp.dll
- (0,0): [10/30/2018 03:50:17.383 PM] Assembly-CSharp.dll compilation finished in 102ms  source files re-parsed: 19 metadata reloaded: 1
- (0,0): [10/30/2018 03:51:32.986 PM] Compiler cache size is now 26.04 MB
- (0,0): [10/30/2018 03:53:08.769 PM] Unity.TextMeshPro.dll: no prior compilation found in cache
- (0,0): [10/30/2018 03:53:08.781 PM] Unity.TextMeshPro.dll compiling...
- (0,0): [10/30/2018 03:53:08.892 PM] Unity.PackageManagerUI.Editor.dll compiling...
- (0,0): [10/30/2018 03:53:09.025 PM] UnityEditor.StandardEvents.dll compiling...
- (0,0): [10/30/2018 03:53:09.076 PM] Unity.PackageManagerUI.Editor.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Unity.PackageManagerUI.Editor.dll
- (0,0): [10/30/2018 03:53:09.080 PM] UnityEditor.StandardEvents.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\UnityEditor.StandardEvents.dll
- (0,0): [10/30/2018 03:53:09.118 PM] UnityEditor.StandardEvents.dll compilation finished in 92ms  source files re-parsed: 0 metadata reloaded: 0
- (0,0): [10/30/2018 03:53:09.129 PM] UnityEditor.StandardEvents.dll: compilation was cached, 0 file(s) were found to have changed.
- (0,0): [10/30/2018 03:53:09.148 PM] Unity.PackageManagerUI.Editor.dll compilation finished in 256ms  source files re-parsed: 0 metadata reloaded: 0
- (0,0): [10/30/2018 03:53:09.159 PM] Unity.PackageManagerUI.Editor.dll: compilation was cached, 0 file(s) were found to have changed.
- (0,0): [10/30/2018 03:53:09.193 PM] Unity.TextMeshPro.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Unity.TextMeshPro.dll
- (0,0): [10/30/2018 03:53:09.275 PM] Unity.TextMeshPro.dll compilation finished in 494ms  source files re-parsed: 45 metadata reloaded: 0
- (0,0): [10/30/2018 03:53:09.540 PM] Unity.TextMeshPro.Editor.dll compiling...
- (0,0): [10/30/2018 03:53:09.678 PM] Unity.TextMeshPro.Editor.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Unity.TextMeshPro.Editor.dll
- (0,0): [10/30/2018 03:53:09.828 PM] Unity.TextMeshPro.Editor.dll compilation finished in 288ms  source files re-parsed: 0 metadata reloaded: 1
- (0,0): [10/30/2018 03:53:09.840 PM] Unity.TextMeshPro.Editor.dll: compilation was cached, 0 file(s) were found to have changed.
- (0,0): [10/30/2018 03:53:10.097 PM] Assembly-CSharp.dll: no prior compilation found in cache
- (0,0): [10/30/2018 03:53:10.108 PM] Assembly-CSharp.dll compiling...
- (0,0): [10/30/2018 03:53:10.171 PM] Assembly-CSharp.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Assembly-CSharp.dll
- (0,0): [10/30/2018 03:53:10.221 PM] Assembly-CSharp.dll compilation finished in 113ms  source files re-parsed: 19 metadata reloaded: 3
- (0,0): [10/30/2018 03:56:37.332 PM] Compiler cache size is now 26.06 MB
+ (0,0): watchdog active on pid: 22156
+ (0,0): [10/30/2018 05:09:09.666 PM] Unity.TextMeshPro.dll: no prior compilation found in cache
+ (0,0): [10/30/2018 05:09:09.680 PM] Unity.TextMeshPro.dll compiling...
+ (0,0): [10/30/2018 05:09:09.697 PM] Unity.PackageManagerUI.Editor.dll: no prior compilation found in cache
+ (0,0): [10/30/2018 05:09:09.709 PM] Unity.PackageManagerUI.Editor.dll compiling...
+ (0,0): [10/30/2018 05:09:09.856 PM] UnityEditor.StandardEvents.dll: no prior compilation found in cache
+ (0,0): [10/30/2018 05:09:09.881 PM] UnityEditor.StandardEvents.dll compiling...
+ (0,0): [10/30/2018 05:09:11.261 PM] UnityEditor.StandardEvents.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\UnityEditor.StandardEvents.dll
+ (0,0): [10/30/2018 05:09:11.262 PM] Unity.TextMeshPro.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Unity.TextMeshPro.dll
+ (0,0): [10/30/2018 05:09:11.262 PM] Unity.PackageManagerUI.Editor.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Unity.PackageManagerUI.Editor.dll
+ (0,0): [10/30/2018 05:09:11.304 PM] UnityEditor.StandardEvents.dll compilation finished in 1423ms  source files re-parsed: 1 metadata reloaded: 0
+ (0,0): [10/30/2018 05:09:11.337 PM] Unity.PackageManagerUI.Editor.dll compilation finished in 1628ms  source files re-parsed: 44 metadata reloaded: 133
+ (0,0): [10/30/2018 05:09:11.339 PM] Unity.TextMeshPro.dll compilation finished in 1659ms  source files re-parsed: 45 metadata reloaded: 155
+ (0,0): [10/30/2018 05:09:11.716 PM] Unity.TextMeshPro.Editor.dll: no prior compilation found in cache
+ (0,0): [10/30/2018 05:09:11.728 PM] Unity.TextMeshPro.Editor.dll compiling...
+ (0,0): [10/30/2018 05:09:11.920 PM] Unity.TextMeshPro.Editor.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Unity.TextMeshPro.Editor.dll
+ (0,0): [10/30/2018 05:09:12.061 PM] Unity.TextMeshPro.Editor.dll compilation finished in 333ms  source files re-parsed: 39 metadata reloaded: 1
+ (0,0): [10/30/2018 05:09:12.237 PM] Assembly-CSharp.dll: no prior compilation found in cache
+ (0,0): [10/30/2018 05:09:12.249 PM] Assembly-CSharp.dll compiling...
+ (0,0): [10/30/2018 05:09:12.317 PM] Assembly-CSharp.dll: emitting IL to : E:\Projects\Hopkins\GIT\WebFM_Unity\Temp\Assembly-CSharp.dll
+ (0,0): [10/30/2018 05:09:12.373 PM] Assembly-CSharp.dll compilation finished in 124ms  source files re-parsed: 18 metadata reloaded: 3
+ (0,0): [10/30/2018 05:14:09.564 PM] Compiler cache size is now 22.64 MB
  (0,0): watchdog triggered an exit

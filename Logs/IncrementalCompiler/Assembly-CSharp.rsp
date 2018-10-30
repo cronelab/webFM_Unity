@@ -277,7 +277,6 @@
 -d:ENABLE_BURST_AOT
 -d:UNITY_TEAM_LICENSE
 -d:ENABLE_VSTU
--i:E:/Projects/Hopkins/GIT/WebFM_Unity/Assets/electrodeOrganizer.cs
 -i:E:/Projects/Hopkins/GIT/WebFM_Unity/Assets/isTouchingCollider.cs
 -i:E:/Projects/Hopkins/GIT/WebFM_Unity/Assets/Scripts/BrainSlicing/ClassificationUtil.cs
 -i:E:/Projects/Hopkins/GIT/WebFM_Unity/Assets/Scripts/BrainSlicing/ClippableObject.cs
