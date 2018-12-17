@@ -8,7 +8,7 @@ Assets/StreamingAssets*
 Converter/*
 webFM_Display/StreamingAssets*
 Assets/Prefabs/PY*
-
+*.meta
 # Visual Studio 2015 cache directory
 /.vs/
 

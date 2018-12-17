@@ -7,22 +7,22 @@ public class MouseOrbitImproved : MonoBehaviour
 
     public Transform target;
     private float distance = 25.0f;
-    private float xSpeed = 1200.0f;
-    private float ySpeed = 1200.0f;
+    private float xSpeed = 700.0f;
+    private float ySpeed = 700.0f;
     Rect screenRect = new Rect(0, 0, Screen.width, Screen.height);
 
-    private float yMinLimit = -100f;
-    private float yMaxLimit = 100f;
+    private float yMinLimit = -1000f;
+    private float yMaxLimit = 1000f;
 
-    private float distanceMin = .5f;
-    private float distanceMax = 105f;
+    private float distanceMin = 80f;
+    private float distanceMax = 125f;
 
     float x = 0.0f;
     float y = 0.0f;
 
     bool gamescreen = true;
     private Vector3 dragOrigin;
-    private float dragSpeed = .01f;
+    private float dragSpeed = .1f;
 
     void Start()
     {
@@ -48,6 +48,7 @@ public class MouseOrbitImproved : MonoBehaviour
 
         if (Input.GetMouseButton(1) || Input.GetAxis("Mouse ScrollWheel") != 0)
         {
+
             x += Input.GetAxis("Mouse X") * xSpeed  * 0.02f;
             y -= Input.GetAxis("Mouse Y") * ySpeed * 0.02f;
 
@@ -55,7 +56,7 @@ public class MouseOrbitImproved : MonoBehaviour
 
             Quaternion rotation = Quaternion.Euler(y, x, 0);
 
-            distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel") * 5, -10, distanceMax);
+            distance = Mathf.Clamp(distance - Input.GetAxis("Mouse ScrollWheel") * 5, distanceMin, distanceMax);
 
             Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
             Vector3 position = rotation * negDistance + target.position;
