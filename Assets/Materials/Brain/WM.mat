@@ -5,9 +5,10 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: solidWM
-  m_Shader: {fileID: 4800000, guid: e78b9c6281e828e4d96f0bcf5a6f6405, type: 3}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WM
+  m_Shader: {fileID: 4800000, guid: 6cf6acc9998fb2048b18d5d75b88671a, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -25,5 +26,6 @@ Material:
     m_Floats:
     - _Glossiness: 0.32
     - _Metallic: 0.199
+    - _Transparency: 1
     m_Colors:
-    - _Color: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
+    - _Color: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 1}

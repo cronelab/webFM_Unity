@@ -14,6 +14,7 @@ public class changeElecColors : MonoBehaviour {
     private void Start()
     {
         elecSize = gameObject.transform.localScale;
+        Debug.Log(elecSize);
     }
 
     public void switchViz()

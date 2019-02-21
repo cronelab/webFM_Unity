@@ -13,14 +13,15 @@ public class UIElements : MonoBehaviour {
     private GameObject lPut, rPut;
     private GameObject lAmgd, rAmgd;
     private GameObject lCaud, rCaud;
-    private GameObject brainMesh;
+    private GameObject brainMesh, WM;
     public GameObject ECoG_Electrodes, SEEG_Electrodes;
     private GameObject structBut, transBut;
 
     private Renderer lHemiRend, rHemiRend,lPutRend,rPutRend,lHipRend,rHipRend,lThalRend,rThalRend,lAmgdRend,rAmgdRend,
         lCaudRend,rCaudRend, brainStemRend;
-    public Slider tranSlider1, tranSlider2, tranSlider3, electrodeScaler, gyriScaler;
-    private Slider xSlider, ySlider, zSlider;
+    private Renderer[] wmRend;
+    public Slider tranSlider1, tranSlider2, tranSlider3, electrodeScaler, gyriScaler, wmScaler;
+
 
 
     private Vector3 screenPoint;
@@ -38,23 +39,6 @@ public class UIElements : MonoBehaviour {
     }
     private void Start()
     {
-        Test();
-        tranSlider1 = GameObject.Find("lPiaSlider").GetComponent<Slider>();
-        tranSlider2 = GameObject.Find("rPiaSlider").GetComponent<Slider>();
-        tranSlider3 = GameObject.Find("subStructSlider").GetComponent<Slider>();
-        electrodeScaler = GameObject.Find("elecScaleFactor").GetComponent<Slider>();
-        gyriScaler = GameObject.Find("gyriScaleFactor").GetComponent<Slider>();
-        structBut = GameObject.Find("Toggles");
-        transBut = GameObject.Find("Sliders");
-        structBut.SetActive(false);
-        transBut.SetActive(false);
-        brainMesh = GameObject.Find("Brain Manager").transform.GetChild(0).gameObject;
-
-        brainMesh.SetActive(true);
-
-    }
-    public void Test()
-    {
         lPia = GameObject.Find("lPia");
         rPia = GameObject.Find("rPia");
         lPut = GameObject.Find("lPut");
@@ -69,6 +53,7 @@ public class UIElements : MonoBehaviour {
         rCaud = GameObject.Find("rCaud");
         brainstem = GameObject.Find("brainstem");
         gyri = GameObject.Find("Gyri");
+        WM = GameObject.Find("White_matter");
 
         lHemiRend = lPia.GetComponent<Renderer>();
         rHemiRend = rPia.GetComponent<Renderer>();
@@ -83,15 +68,26 @@ public class UIElements : MonoBehaviour {
         lCaudRend = lCaud.GetComponent<Renderer>();
         rCaudRend = rCaud.GetComponent<Renderer>();
         brainStemRend = brainstem.GetComponent<Renderer>();
+        wmRend = WM.GetComponentsInChildren<Renderer>();
 
         ECoG_Electrodes = GameObject.Find("ECoG");
         SEEG_Electrodes = GameObject.Find("SEEG");
+        tranSlider1 = GameObject.Find("lPiaSlider").GetComponent<Slider>();
+        tranSlider2 = GameObject.Find("rPiaSlider").GetComponent<Slider>();
+        tranSlider3 = GameObject.Find("subStructSlider").GetComponent<Slider>();
+        electrodeScaler = GameObject.Find("elecScaleFactor").GetComponent<Slider>();
+        gyriScaler = GameObject.Find("gyriScaleFactor").GetComponent<Slider>();
+        wmScaler = GameObject.Find("wmScaleFactor").GetComponent<Slider>();
+        structBut = GameObject.Find("Toggles");
+        transBut = GameObject.Find("Sliders");
+        structBut.SetActive(false);
+        transBut.SetActive(false);
+        brainMesh = GameObject.Find("Brain Manager").transform.GetChild(0).gameObject;
 
-
-
-
+        brainMesh.SetActive(true);
 
     }
+ 
     void Update()
     {
         lHemiRend.material.SetFloat("_Transparency", tranSlider1.value);
@@ -107,6 +103,11 @@ public class UIElements : MonoBehaviour {
         rAmgdRend.material.SetFloat("_Transparency", tranSlider3.value);
         lAmgdRend.material.SetFloat("_Transparency", tranSlider3.value);
         brainStemRend.material.SetFloat("_Transparency", tranSlider3.value);
+        foreach(Renderer rends in wmRend)
+        {
+            rends.material.SetFloat("_Transparency", wmScaler.value);
+
+        }
 
 
         Component[] renderers;
@@ -119,20 +120,6 @@ public class UIElements : MonoBehaviour {
             rend.material.SetFloat("_Transparency", gyriScaler.value);
         }
     }
-
-    //public void toggleMeshorVol()
-    //{
-    //    if (brainMesh.activeSelf)
-    //    {
-    //        GameObject.Find("Main Camera").GetComponent<RayMarching>().enabled = true;
-    //        brainMesh.SetActive(false);
-    //    }
-    //    else
-    //    {
-    //        GameObject.Find("Main Camera").GetComponent<RayMarching>().enabled = false;
-    //        brainMesh.SetActive(true);
-    //    }
-    //}
     public void toggleButtons()
     {
         if (!structBut.activeSelf)
@@ -169,32 +156,24 @@ public class UIElements : MonoBehaviour {
 
     public void toggleWM()
     {
-       if(lPia.activeSelf)
+       if (WM.activeSelf)
         {
-            toggleAll(false);
-            var electrodes = GameObject.FindGameObjectsWithTag("Electrodes");
-            foreach (GameObject elec in electrodes)
-            {
-                elec.GetComponent<isTouchingCollider>().enabled = true;
-            }
-            GameObject.Find("White_matter").transform.GetChild(0).GetComponent<MeshCollider>().enabled = true;
-            GameObject.Find("White_matter").transform.GetChild(1).GetComponent<MeshCollider>().enabled = true;
-            GameObject.Find("White_matter").transform.GetChild(0).GetComponent<MeshRenderer>().enabled = true;
-            GameObject.Find("White_matter").transform.GetChild(1).GetComponent<MeshRenderer>().enabled = true;
+            //var electrodes = GameObject.FindGameObjectsWithTag("Electrodes");
+            //foreach (GameObject elec in electrodes)
+            //{
+            //    elec.GetComponent<isTouchingCollider>().enabled = true;
+            //}
+            WM.SetActive(false);
         }
         else
         {
-            toggleAll(true);
-            var electrodes = GameObject.FindGameObjectsWithTag("Electrodes");
-            foreach (GameObject elec in electrodes)
-            {
-                elec.GetComponent<isTouchingCollider>().enabled = false;
-                elec.GetComponent<Renderer>().material.color = Color.black;
-            }
-            GameObject.Find("White_matter").transform.GetChild(0).GetComponent<MeshCollider>().enabled = false;
-            GameObject.Find("White_matter").transform.GetChild(1).GetComponent<MeshCollider>().enabled = false;
-            GameObject.Find("White_matter").transform.GetChild(0).GetComponent<MeshRenderer>().enabled = false;
-            GameObject.Find("White_matter").transform.GetChild(1).GetComponent<MeshRenderer>().enabled = false;
+            //var electrodes = GameObject.FindGameObjectsWithTag("Electrodes");
+            //foreach (GameObject elec in electrodes)
+            //{
+            //    elec.GetComponent<isTouchingCollider>().enabled = false;
+            //    elec.GetComponent<Renderer>().material.color = Color.black;
+            //}
+            WM.SetActive(true);
         }
     }
 

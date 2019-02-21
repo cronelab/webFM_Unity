@@ -6,7 +6,7 @@ public class MouseOrbitImproved : MonoBehaviour
 {
 
     public Transform target;
-    private float distance = 25.0f;
+    private float distance = 50.0f;
     private float xSpeed = 700.0f;
     private float ySpeed = 700.0f;
     Rect screenRect = new Rect(0, 0, Screen.width, Screen.height);
@@ -14,8 +14,8 @@ public class MouseOrbitImproved : MonoBehaviour
     private float yMinLimit = -1000f;
     private float yMaxLimit = 1000f;
 
-    private float distanceMin = 80f;
-    private float distanceMax = 125f;
+    private float distanceMin = 100f;
+    private float distanceMax = 225f;
 
     float x = 0.0f;
     float y = 0.0f;
