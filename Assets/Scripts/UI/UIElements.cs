@@ -82,7 +82,7 @@ public class UIElements : MonoBehaviour {
         transBut = GameObject.Find("Sliders");
         structBut.SetActive(false);
         transBut.SetActive(false);
-        brainMesh = GameObject.Find("Brain Manager").transform.GetChild(0).gameObject;
+        brainMesh = GameObject.Find("Manager").transform.GetChild(0).gameObject;
 
         brainMesh.SetActive(true);
 

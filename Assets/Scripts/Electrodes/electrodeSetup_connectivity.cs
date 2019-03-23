@@ -75,8 +75,8 @@ public class electrodeSetup_connectivity : MonoBehaviour {
                 sphere.transform.SetParent(electrodeType.GetChild(j).transform);
                 sphere.transform.position = elecCollider.bounds.center;
                 sphere.transform.localScale = new Vector3(scalingFactor, scalingFactor, scalingFactor);
-                sphere.AddComponent<changeElecColors>();
-                sphere.GetComponent<changeElecColors>().elecGradient = ElecGradient;
+                sphere.AddComponent<ElectrodeManager>();
+                sphere.GetComponent<ElectrodeManager>().elecGradient = ElecGradient;
                 sphere.name = electrodeGroup.name + (i + 1);
                 sphere.AddComponent<isTouchingCollider>();
                 sphere.GetComponent<isTouchingCollider>().enabled = false;
