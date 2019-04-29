@@ -72,14 +72,14 @@ public class ElectrodeManager : MonoBehaviour
         sphere = GameObject.Find(elec);
         foreach (GameObject electrode in GameObject.FindGameObjectsWithTag("Electrodes"))
         {
-            if(electrode.GetComponent<Renderer>().material.color == Color.yellow)
+            if (electrode.GetComponent<Renderer>().material.color == Color.yellow)
             {
                 electrode.GetComponent<Renderer>().material.color = Color.black;
             }
         }
         sphere.GetComponent<Renderer>().material.color = Color.yellow;
         yield return new WaitForSeconds(.5f);
-      
+
 
     }
 
@@ -88,30 +88,31 @@ public class ElectrodeManager : MonoBehaviour
         float elecSliderVal = Mathf.Abs(GameObject.Find("Canvas").GetComponent<UIElements>().electrodeScaler.value);
         var sElec = elec.Split(" "[0])[0];
         var sAct = elec.Split(" "[0])[1];
-        float valFromBrowser = float.Parse(sAct) ;
-        sphere = GameObject.Find(sElec);
-        //Yo, super inelegant, but most vals are between -.5 and .5, not 0 and 1.
-        Color colorGrad = elecGradient.Evaluate(valFromBrowser + .5f);
-        sphere.transform.GetComponent<Renderer>().material.color = new Color(colorGrad.r, colorGrad.g, colorGrad.b);
-        float scalingVal = elecSliderVal * (float)System.Math.Sqrt((Mathf.Abs(valFromBrowser)));
-        if (valFromBrowser != 0)
+        float valFromBrowser = float.Parse(sAct);
+        if (valFromBrowser < 1000 || valFromBrowser > -1000)
         {
-            sphere.transform.localScale = new Vector3(scalingVal, scalingVal, scalingVal);
-        }
-        else if (valFromBrowser == 0)
-        {
-
-            if (viz == false)
+            sphere = GameObject.Find(sElec);
+            //Yo, super inelegant, but most vals are between -.5 and .5, not 0 and 1.
+            Color colorGrad = elecGradient.Evaluate(valFromBrowser + .5f);
+            sphere.transform.GetComponent<Renderer>().material.color = new Color(colorGrad.r, colorGrad.g, colorGrad.b);
+            float scalingVal = elecSliderVal * (float)System.Math.Sqrt((Mathf.Abs(valFromBrowser)));
+            if (valFromBrowser != 0)
             {
-                sphere.transform.localScale = new Vector3(0, 0, 0);
+                sphere.transform.localScale = new Vector3(scalingVal, scalingVal, scalingVal);
             }
-            else
+            else if (valFromBrowser == 0)
             {
-                sphere.transform.localScale = new Vector3(.01f, .01f, .01f);
-                sphere.transform.GetComponent<Renderer>().material.color = Color.black;
+
+                if (viz == false)
+                {
+                    sphere.transform.localScale = new Vector3(0, 0, 0);
+                }
+                else
+                {
+                    sphere.transform.localScale = new Vector3(.01f, .01f, .01f);
+                    sphere.transform.GetComponent<Renderer>().material.color = Color.black;
+                }
             }
         }
-
-
     }
 }
