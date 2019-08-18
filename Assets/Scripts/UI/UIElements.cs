@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class UIElements : MonoBehaviour {
+public class UIElements : MonoBehaviour
+{
 
     private GameObject lPia, rPia;
     private GameObject lHip, rHip;
@@ -14,11 +15,11 @@ public class UIElements : MonoBehaviour {
     private GameObject lAmgd, rAmgd;
     private GameObject lCaud, rCaud;
     private GameObject brainMesh, WM;
-    public GameObject ECoG_Electrodes, SEEG_Electrodes;
+    public GameObject Electrodes;
     private GameObject structBut, transBut;
 
-    private Renderer lHemiRend, rHemiRend,lPutRend,rPutRend,lHipRend,rHipRend,lThalRend,rThalRend,lAmgdRend,rAmgdRend,
-        lCaudRend,rCaudRend, brainStemRend;
+    private Renderer lHemiRend, rHemiRend, lPutRend, rPutRend, lHipRend, rHipRend, lThalRend, rThalRend, lAmgdRend, rAmgdRend,
+        lCaudRend, rCaudRend, brainStemRend;
     private Renderer[] wmRend;
     public Slider tranSlider1, tranSlider2, tranSlider3, electrodeScaler, gyriScaler, wmScaler;
 
@@ -39,8 +40,8 @@ public class UIElements : MonoBehaviour {
     }
     private void Start()
     {
-        lPia = GameObject.Find("lPia");
-        rPia = GameObject.Find("rPia");
+        lPia = GameObject.Find("lh_pial");
+        rPia = GameObject.Find("rh_pial");
         lPut = GameObject.Find("lPut");
         rPut = GameObject.Find("rPut");
         lHip = GameObject.Find("lHipp");
@@ -51,7 +52,7 @@ public class UIElements : MonoBehaviour {
         rAmgd = GameObject.Find("rAmgd");
         lCaud = GameObject.Find("lCaud");
         rCaud = GameObject.Find("rCaud");
-        brainstem = GameObject.Find("brainstem");
+        brainstem = GameObject.Find("lBrainStem");
         gyri = GameObject.Find("Gyri");
         WM = GameObject.Find("White_matter");
 
@@ -70,8 +71,8 @@ public class UIElements : MonoBehaviour {
         brainStemRend = brainstem.GetComponent<Renderer>();
         wmRend = WM.GetComponentsInChildren<Renderer>();
 
-        ECoG_Electrodes = GameObject.Find("ECoG");
-        SEEG_Electrodes = GameObject.Find("SEEG");
+        Electrodes = GameObject.Find("Electrodes");
+
         tranSlider1 = GameObject.Find("lPiaSlider").GetComponent<Slider>();
         tranSlider2 = GameObject.Find("rPiaSlider").GetComponent<Slider>();
         tranSlider3 = GameObject.Find("subStructSlider").GetComponent<Slider>();
@@ -87,7 +88,7 @@ public class UIElements : MonoBehaviour {
         brainMesh.SetActive(true);
 
     }
- 
+
     void Update()
     {
         lHemiRend.material.SetFloat("_Transparency", tranSlider1.value);
@@ -103,7 +104,7 @@ public class UIElements : MonoBehaviour {
         rAmgdRend.material.SetFloat("_Transparency", tranSlider3.value);
         lAmgdRend.material.SetFloat("_Transparency", tranSlider3.value);
         brainStemRend.material.SetFloat("_Transparency", tranSlider3.value);
-        foreach(Renderer rends in wmRend)
+        foreach (Renderer rends in wmRend)
         {
             rends.material.SetFloat("_Transparency", wmScaler.value);
 
@@ -156,7 +157,7 @@ public class UIElements : MonoBehaviour {
 
     public void toggleWM()
     {
-       if (WM.activeSelf)
+        if (WM.activeSelf)
         {
             //var electrodes = GameObject.FindGameObjectsWithTag("Electrodes");
             //foreach (GameObject elec in electrodes)
@@ -296,32 +297,18 @@ public class UIElements : MonoBehaviour {
     public void toggleECoGElec()
     {
 
-        if (!ECoG_Electrodes.activeSelf)
+        if (!Electrodes.activeSelf)
         {
-            ECoG_Electrodes.SetActive(true);
-            SEEG_Electrodes.SetActive(true);
+            Electrodes.SetActive(true);
 
             return;
         }
         else
         {
-            ECoG_Electrodes.SetActive(false);
-            SEEG_Electrodes.SetActive(false);
+            Electrodes.SetActive(false);
 
             return;
         }
     }
-    public void toggleSEEGElec()
-    {
-        if (!SEEG_Electrodes.activeSelf)
-        {
-            SEEG_Electrodes.SetActive(true);
-            return;
-        }
-        else
-        {
-            SEEG_Electrodes.SetActive(false);
-            return;
-        }
-    }
+
 }

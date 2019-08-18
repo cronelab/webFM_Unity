@@ -51,3 +51,5 @@ Image_40
 Assets/PlayServicesResolver/*
 Logs/IncrementalCompiler/unity_incremental_compiler_server.log
 .vscode/settings.json
+TIFFs/*
+Logs/Packages-Update.log

@@ -14,14 +14,49 @@ public class BrainManager : MonoBehaviour
     public Material mWM;
     public Shader shader;
 
+    private string[] gyriNames = new string[]{"bankssts",
+"inferiorparietal",
+"medialorbitofrontal",
+"pericalcarine",
+"superiorfrontal",
+"caudalanteriorcingulate",
+"inferiortemporal",
+"middletemporal",
+"postcentral",
+"superiorparietal",
+"caudalmiddlefrontal",
+"insula",
+"paracentral",
+"posteriorcingulate",
+"superiortemporal",
+"cuneus",
+"isthmuscingulate",
+"parahippocampal",
+"precentral",
+"supramarginal",
+"entorhinal",
+"lateraloccipital",
+"parsopercularis",
+"precuneus",
+"temporalpole",
+"frontalpole",
+"lateralorbitofrontal",
+"parsorbitalis",
+"rostralanteriorcingulate",
+"transversetemporal",
+"fusiform",
+"lingual",
+"parstriangularis",
+"rostralmiddlefrontal"};
+
     // Start is called before the first frame update
     void Start()
     {
         //Set up everything coming out of Blender.
         GameObject brain = gameObject.transform.GetChild(0).gameObject;
-        GameObject pia = brain.transform.GetChild(0).gameObject;
+        GameObject pia = brain.transform.GetChild(2).gameObject;
         GameObject gyri = brain.transform.GetChild(1).gameObject;
-        GameObject whiteMatter = brain.transform.GetChild(2).gameObject;
+        GameObject whiteMatter = brain.transform.GetChild(4).gameObject;
         GameObject substructures = brain.transform.GetChild(3).gameObject;
 
         //Get the child renderers.
@@ -36,19 +71,32 @@ public class BrainManager : MonoBehaviour
             rends.material = mPia;
         }
         //Set the hologram shader and random colors for the Gyri.
-        foreach (Renderer rends in gyriRenderers)
+        foreach (string gyriName in gyriNames)
         {
-            rends.material = new Material(shader);
-            rends.material.color = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f));
+            float r = Random.Range(0.0f, 1.0f);
+            float g = Random.Range(0.0f, 1.0f);
+            float b = Random.Range(0.0f, 1.0f);
+            Renderer lgyrRend = GameObject.Find("lh_" + gyriName).transform.GetComponentInChildren<Renderer>();
+            Renderer rgyrRend = GameObject.Find("rh_" + gyriName).transform.GetComponentInChildren<Renderer>();
+            lgyrRend.material = new Material(shader);
+            rgyrRend.material = new Material(shader);
+            lgyrRend.material.color = new Color(r, g, b);
+            rgyrRend.material.color = new Color(r, g, b);
 
         }
+        // foreach (Renderer rends in gyriRenderers)
+        // {
+        //     rends.material = new Material(shader);
+        //     rends.material.color = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f));
+
+        // }
         //Disable the Gyri.
         gyri.SetActive(false);
 
         //Set the material for each of the substructures.
         foreach (Renderer rends in subStructRenderers)
         {
-            if(rends.gameObject.name == "brainstem")
+            if (rends.gameObject.name == "brainstem")
             {
                 rends.material = mBrainstem;
             }
@@ -86,6 +134,6 @@ public class BrainManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
