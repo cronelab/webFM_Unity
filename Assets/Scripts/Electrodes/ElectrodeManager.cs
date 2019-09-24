@@ -27,7 +27,7 @@ public class ElectrodeManager : MonoBehaviour
             int numElectrodesInGroup = electrodeGroup.childCount;
             for (int i = 0; i < numElectrodesInGroup; i++)
             {
-
+                electrodeGroup.GetChild(i).transform.gameObject.AddComponent<SphereCollider>();
                 var elecCollider = electrodeGroup.GetChild(i).GetComponent<Collider>();
                 Destroy(electrodeGroup.GetChild(i).gameObject);
                 sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);

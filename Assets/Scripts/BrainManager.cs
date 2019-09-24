@@ -52,7 +52,9 @@ public class BrainManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         //Set up everything coming out of Blender.
+        shader = Shader.Find("Unlit/SpecialFX/Cool Hologram");
         GameObject brain = gameObject.transform.GetChild(0).gameObject;
         GameObject pia = brain.transform.GetChild(2).gameObject;
         GameObject gyri = brain.transform.GetChild(1).gameObject;
@@ -64,12 +66,13 @@ public class BrainManager : MonoBehaviour
         Component[] gyriRenderers = gyri.transform.GetComponentsInChildren<Renderer>();
         Component[] subStructRenderers = substructures.transform.GetComponentsInChildren<Renderer>();
         Component[] wmRenderers = whiteMatter.transform.GetComponentsInChildren<Renderer>();
-
+        
         //Set Pia materials.
         foreach (Renderer rends in pialRenderers)
-        {
-            rends.material = mPia;
-        }
+            {
+                rends.material = mPia;
+            }
+     
         //Set the hologram shader and random colors for the Gyri.
         foreach (string gyriName in gyriNames)
         {
