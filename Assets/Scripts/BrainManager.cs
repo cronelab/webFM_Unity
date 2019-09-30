@@ -4,50 +4,52 @@ using UnityEngine;
 
 public class BrainManager : MonoBehaviour
 {
-    public Material mPia;
-    public Material mBrainstem;
-    public Material mAmygdala;
-    public Material mCaudate;
-    public Material mHippocampus;
-    public Material mThalamus;
-    public Material mPutaman;
-    public Material mWM;
-    public Shader shader;
-
-    private string[] gyriNames = new string[]{"bankssts",
-"inferiorparietal",
-"medialorbitofrontal",
-"pericalcarine",
-"superiorfrontal",
-"caudalanteriorcingulate",
-"inferiortemporal",
-"middletemporal",
-"postcentral",
-"superiorparietal",
-"caudalmiddlefrontal",
-"insula",
-"paracentral",
-"posteriorcingulate",
-"superiortemporal",
-"cuneus",
-"isthmuscingulate",
-"parahippocampal",
-"precentral",
-"supramarginal",
-"entorhinal",
-"lateraloccipital",
-"parsopercularis",
-"precuneus",
-"temporalpole",
-"frontalpole",
-"lateralorbitofrontal",
-"parsorbitalis",
-"rostralanteriorcingulate",
-"transversetemporal",
-"fusiform",
-"lingual",
-"parstriangularis",
-"rostralmiddlefrontal"};
+    private Material mPia;
+    private Material mBrainstem;
+    private Material mAmygdala;
+    private Material mCaudate;
+    private Material mHippocampus;
+    private Material mThalamus;
+    private Material mPutaman;
+    private Material mWM;
+    private Shader shader;
+    public Material test;
+    private string[] gyriNames = new string[]{
+        "bankssts",
+        "inferiorparietal",
+        "medialorbitofrontal",
+        "pericalcarine",
+        "superiorfrontal",
+        "caudalanteriorcingulate",
+        "inferiortemporal",
+        "middletemporal",
+        "postcentral",
+        "superiorparietal",
+        "caudalmiddlefrontal",
+        "insula",
+        "paracentral",
+        "posteriorcingulate",
+        "superiortemporal",
+        "cuneus",
+        "isthmuscingulate",
+        "parahippocampal",
+        "precentral",
+        "supramarginal",
+        "entorhinal",
+        "lateraloccipital",
+        "parsopercularis",
+        "precuneus",
+        "temporalpole",
+        "frontalpole",
+        "lateralorbitofrontal",
+        "parsorbitalis",
+        "rostralanteriorcingulate",
+        "transversetemporal",
+        "fusiform",
+        "lingual",
+        "parstriangularis",
+        "rostralmiddlefrontal"
+    };
 
     // Start is called before the first frame update
     void Start()
@@ -55,24 +57,19 @@ public class BrainManager : MonoBehaviour
 
         //Set up everything coming out of Blender.
         shader = Shader.Find("Unlit/SpecialFX/Cool Hologram");
-        GameObject brain = gameObject.transform.GetChild(0).gameObject;
-        GameObject pia = brain.transform.GetChild(2).gameObject;
-        GameObject gyri = brain.transform.GetChild(1).gameObject;
-        GameObject whiteMatter = brain.transform.GetChild(4).gameObject;
-        GameObject substructures = brain.transform.GetChild(3).gameObject;
+        mPia = Resources.Load<Material>("Materials/Brain/Pia"); ;
+        mBrainstem = Resources.Load<Material>("Materials/Brain/Brainstem");
+        mAmygdala = Resources.Load<Material>("Materials/Brain/Amygdyla");
+        mCaudate = Resources.Load<Material>("Materials/Brain/Caudate");
+        mHippocampus = Resources.Load<Material>("Materials/Brain/Hippocampus");
+        mThalamus = Resources.Load<Material>("Materials/Brain/Thalamus");
+        mPutaman = Resources.Load<Material>("Materials/Brain/Putamen");
+        mWM = Resources.Load<Material>("Materials/Brain/WM");
+        GameObject pia = gameObject.transform.GetChild(2).gameObject;
+        GameObject gyri = gameObject.transform.GetChild(1).gameObject;
+        GameObject whiteMatter = gameObject.transform.GetChild(4).gameObject;
+        GameObject substructures = gameObject.transform.GetChild(3).gameObject;
 
-        //Get the child renderers.
-        Component[] pialRenderers = pia.transform.GetComponentsInChildren<Renderer>();
-        Component[] gyriRenderers = gyri.transform.GetComponentsInChildren<Renderer>();
-        Component[] subStructRenderers = substructures.transform.GetComponentsInChildren<Renderer>();
-        Component[] wmRenderers = whiteMatter.transform.GetComponentsInChildren<Renderer>();
-        
-        //Set Pia materials.
-        foreach (Renderer rends in pialRenderers)
-            {
-                rends.material = mPia;
-            }
-     
         //Set the hologram shader and random colors for the Gyri.
         foreach (string gyriName in gyriNames)
         {
@@ -87,19 +84,17 @@ public class BrainManager : MonoBehaviour
             rgyrRend.material.color = new Color(r, g, b);
 
         }
-        // foreach (Renderer rends in gyriRenderers)
-        // {
-        //     rends.material = new Material(shader);
-        //     rends.material.color = new Color(Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f), Random.Range(0.0f, 1.0f));
 
-        // }
         //Disable the Gyri.
         gyri.SetActive(false);
+        pia.SetActive(false);
+        whiteMatter.SetActive(true);
+        substructures.SetActive(false);
 
         //Set the material for each of the substructures.
-        foreach (Renderer rends in subStructRenderers)
+        foreach (Renderer rends in substructures.transform.GetComponentsInChildren<Renderer>())
         {
-            if (rends.gameObject.name == "brainstem")
+            if (rends.gameObject.name == "lbrainstem")
             {
                 rends.material = mBrainstem;
             }
@@ -124,14 +119,19 @@ public class BrainManager : MonoBehaviour
                 rends.material = mPutaman;
             }
         }
-        foreach (Renderer rends in wmRenderers)
+        foreach (MeshRenderer rend in pia.transform.GetComponentsInChildren<MeshRenderer>())
         {
-            rends.material = mWM;
+            rend.material = mPia;
+        }
+        foreach (MeshRenderer rend in whiteMatter.transform.GetComponentsInChildren<MeshRenderer>())
+        {
+            rend.material = mWM;
+            rend.material.SetFloat("_Transparency", .35f);
+
 
 
         }
-        //Disable the WM.
-        whiteMatter.SetActive(false);
+
     }
 
     // Update is called once per frame
