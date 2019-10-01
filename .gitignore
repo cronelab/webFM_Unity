@@ -39,3 +39,5 @@ Assets/Prefabs/BrainMeshes/*
 .vscode/settings.json
 *.ffs_db
 Assets/Prefabs/.DS_Store
+.DS_Store
+Assets/.DS_Store
