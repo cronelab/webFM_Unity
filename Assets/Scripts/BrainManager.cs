@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class BrainManager : MonoBehaviour
 {
@@ -13,7 +11,6 @@ public class BrainManager : MonoBehaviour
     private Material mPutaman;
     private Material mWM;
     private Shader shader;
-    public Material test;
     private string[] gyriNames = new string[]{
         "bankssts",
         "inferiorparietal",
@@ -54,7 +51,6 @@ public class BrainManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
         //Set up everything coming out of Blender.
         shader = Shader.Find("Unlit/SpecialFX/Cool Hologram");
         mPia = Resources.Load<Material>("Materials/Brain/Pia"); ;
