@@ -37,3 +37,5 @@ sysinfo.txt
 Assets/Brains
 Assets/Prefabs/BrainMeshes/*
 .vscode/settings.json
+*.ffs_db
+Assets/Prefabs/.DS_Store
